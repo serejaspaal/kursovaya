@@ -1,5 +1,3 @@
-#include <cstdio>
-
 #include "map.h"
 
 #define clrscr() printf("\e[2J");
@@ -114,7 +112,7 @@ void Map::show()
         }
         printf("\n");
     }
-    printf("Press SPACE if you think you made it\nPress TAB if you want to quit");
+    printf("Use Arrows to control your cursor\nPress SPACE if you think you made it\nPress TAB if you want to quit");
 }
 
 void Map::show(int num)
@@ -158,7 +156,7 @@ void Map::show(int num)
         }
         printf("\n");
     }
-    printf("Press ENTER if you think you made it\nPress TAB if you want to quit");
+    printf("Use Arrows to control your cursor\nPress SPACE if you think you made it\nPress TAB if you want to quit");
 }
 
 bool Map::check_column(int x, int y)
@@ -240,8 +238,8 @@ bool Map::check_done()
     if (endcheck)
     {
         Cursor happy;
-        happy.gotoxy(30, 15);
-        printf("NICE JOB!!!\npress any button to continue");
+        happy.gotoxy(30, 18);
+        printf("NICE JOB!!!\nPress any button to quit");
         getchar();
     }
     else
@@ -249,7 +247,7 @@ bool Map::check_done()
         clrscr();
         Cursor sad;
         sad.gotoxy(30, 12);
-        printf("we are not done with it buddy");
+        printf("we are not done");
         getchar();
         show();
     }

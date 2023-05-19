@@ -1,6 +1,8 @@
 #ifndef CONTROLS__
 #define CONTROLS__
 
+#include <cstdio>
+
 class Cursor
 {
 private:
